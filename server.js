@@ -147,7 +147,7 @@ app.use('/img', express.static(imagesFolder));
 app.post("/posts", (req, res) => {
   const body = req.body
   const randomFile = Math.ceil(Math.random() * 10);
-  posts.push({id: nextId++, created: Date.now(), author: faker.name.findName(), ...body, company: faker.name.jobType(), avatar: `http://localhost:7070/img/${randomFile}.png`});
+  posts.push({id: nextId++, created: Date.now(), author: faker.name.findName(), ...body, company: faker.name.jobType(), avatar: `https://react-router-backend.onrender.com/img/${randomFile}.png`});
   res.status(204);
   res.end();
 });
